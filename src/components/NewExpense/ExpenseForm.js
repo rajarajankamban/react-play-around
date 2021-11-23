@@ -61,6 +61,10 @@ const ExpenseForm = (props) => {
     setEnteredDate('');
   };
 
+  const toogleShowExpenseHandler = () => {
+    props.toogleShowExpenseHandler();
+  };
+
   return (
     <form className="new-expense__controls" onSubmit={submitHandler}>
       <div className="new-expense__control">
@@ -88,6 +92,7 @@ const ExpenseForm = (props) => {
         />
       </div>
       <div className="new-expense__actions">
+        <button onClick={toogleShowExpenseHandler}>Cancel</button>
         <button type="submit">Add Expense</button>
       </div>
     </form>
